@@ -27,4 +27,4 @@ node_modules
 # Users Environment Variables
 .lock-wscript
 dist
-example/react-backbone.js
+example/js/react-backbone.js
