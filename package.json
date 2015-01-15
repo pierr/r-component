@@ -1,0 +1,23 @@
+{
+  "name": "react-backbone-test",
+  "version": "0.0.0",
+  "description": "Backbone and react test.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pierr/react-backbone-test.git"
+  },
+  "keywords": [
+    "backbone",
+    "react"
+  ],
+  "author": "Pierre Besson <pierre.besson7+npm@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pierr/react-backbone-test/issues"
+  },
+  "homepage": "https://github.com/pierr/react-backbone-test"
+}
