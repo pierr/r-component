@@ -31,3 +31,6 @@ gulp.task('serve', ['build'], function () {
   //gulp.watch(['app/scripts/**/*.js'], jshint);
   //gulp.watch(['app/images/**/*'], reload);
 });
+
+gulp.task('build', ['browserify']);
+gulp.task('default', ['build']);
