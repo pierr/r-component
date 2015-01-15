@@ -19,5 +19,12 @@
   "bugs": {
     "url": "https://github.com/pierr/react-backbone-test/issues"
   },
-  "homepage": "https://github.com/pierr/react-backbone-test"
+  "homepage": "https://github.com/pierr/react-backbone-test",
+  "devDependencies": {
+    "browserify": "^8.1.1",
+    "reactify": "^0.17.1"
+  },
+  "dependencies": {
+    "react": "^0.12.2"
+  }
 }
