@@ -9,7 +9,7 @@ module.exports = React.createClass({
     // this.refs when the component is mounted.
     return (
       <div class="input-group">
-        <input type="text" ref="myTextInput" onChange={this.handleChange} value={this.props.name} />
+        <input type="text" ref="myTextInput" onChange={this.handleChange} value={this.props.name} data-metadata={this.props.data} />
       </div>
     );
   }
