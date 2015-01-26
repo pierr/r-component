@@ -1,3 +1,4 @@
+require('./config');
 var React = require('react');
 var pierre = {pierre: "Pierre Besson", metadata: {pierre: "DO_PRENOM"}, context: [{label: "test", value: 1}, {label: "test2", value:2}]};
 var Form = require('./component/form');
