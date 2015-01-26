@@ -1,5 +1,4 @@
 var React = require('react');
-var Input = require('./component/input');
 var pierre = {pierre: "Pierre Besson", metadata: {pierre: "DO_PRENOM"}, context: [{label: "test", value: 1}, {label: "test2", value:2}]};
 var Form = require('./component/form');
 var SearchInput = require('./component/search-input');
@@ -15,8 +14,6 @@ var MyComponent = React.createClass({
       <div>
         <SearchInput data={this.props.data.context} />
         <Form data={this.props.data} />
-        <Input value={this.props.name} />
-        <input type="text" ref="myTextInput" value={this.props.name} />
         <button value={this.props.name} onClick={this.handleClick} />
       </div>
     );
