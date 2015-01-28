@@ -10,6 +10,14 @@ gulp.task('browserify', function(){
   .pipe(gulp.dest('./example/js'));
 });
 
+gulp.task('style', function() {
+  var less = require('gulp-less');
+  var concat = require('gulp-concat');
+  gulp.src('./app/styles/custom.less')
+    .pipe(less())
+    .pipe(gulp.dest('./example/css'));
+});
+
 
 
 var browserSync = require('browser-sync');
@@ -28,9 +36,10 @@ gulp.task('serve', ['build'], function () {
   });
 
   gulp.watch(['package.json','index.js','app/**/*.{json,js, coffee}'],['browserify',reload]);
+  gulp.watch(['app/styles/**/*.less'], ['style', reload]);
   //gulp.watch(['app/scripts/**/*.js'], jshint);
   //gulp.watch(['app/images/**/*'], reload);
 });
 
-gulp.task('build', ['browserify']);
+gulp.task('build', ['browserify', 'style']);
 gulp.task('default', ['build']);
