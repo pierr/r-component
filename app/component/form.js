@@ -1,3 +1,4 @@
+/**@jsx*/
 var React = require('react');
 var Input = require('./input');
 module.exports = React.createClass({
