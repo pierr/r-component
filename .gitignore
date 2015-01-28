@@ -19,3 +19,4 @@ node_modules
 # Users Environment Variables
 .lock-wscript
 example/js/react-backbone.js
+.idea
