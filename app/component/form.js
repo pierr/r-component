@@ -6,7 +6,9 @@ module.exports = React.createClass({
   renderInputs: function renderInputs(){
     var inputs ={};
     for(var key in this.props.data ){
-      inputs[key] = <Input name={key} data={this.props.data.metadata[key]}/>;
+      if(key !== metadata){
+        inputs[key] = <Input name={key} data={this.props.data.metadata[key]}/>;
+      }
     }
     return inputs;
   },
@@ -19,10 +21,10 @@ module.exports = React.createClass({
     // this.refs when the component is mounted.
 
     return (
-      <form>
+      <Form>
         {this.renderInputs()}
         <button onClick={this.handleButtonEditClick}>Edit</button>
-      </form>
+      </Form>
 
     );
   }

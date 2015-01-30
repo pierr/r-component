@@ -1,9 +1,11 @@
 require('./config');
 var React = require('react');
-var pierre = {pierre: "Pierre Besson", metadata: {pierre: "DO_PRENOM"}, context: [{label: "test", value: 1}, {label: "test2", value:2}]};
-var Form = require('./component/form');
 var SearchInput = require('./component/search-input');
-var Main = require('./component/Main')
+
+var User = require('./Model/user');
+var user = new User({firstName: "pierre", lastName: "besson"});
+
+var Main = require('./component/Main');
 var MyComponent = React.createClass({
   handleClick: function() {
     // Explicitly focus the text input using the raw DOM API.
@@ -15,14 +17,16 @@ var MyComponent = React.createClass({
     return (
       <div>
         <SearchInput data={this.props.data.context} />
-        <Form data={this.props.data} />
+        <Page data={this.props.data} />
         <button value={this.props.name} onClick={this.handleClick} />
       </div>
     );
   }
 });
 
-React.render(<Main />, document.body);
+
+
+React.render(<Main data={user.toJSON()}/>, document.body);
 /*React.render(
   <MyComponent name="pierre" data={pierre}/>,
   document.getElementById('example')

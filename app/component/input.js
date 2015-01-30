@@ -1,5 +1,5 @@
 var React = require('react');
-var Input = require('material-ui').Input; 
+var Input = require('material-ui').Input;
 module.exports = React.createClass({
   handleChange: function(e) {
     console.log(e);
@@ -9,7 +9,7 @@ module.exports = React.createClass({
     // The ref attribute adds a reference to the component to
     // this.refs when the component is mounted.
     return (
-        <input type="text" ref="myTextInput" onChange={this.handleChange} value={this.props.name} data-metadata={this.props.data} />
+        <Input type="text" ref="myTextInput" onChange={this.handleChange} placeholder={this.props.label}  value={this.props.name} data-metadata={this.props.data} />
     );
   }
 });
