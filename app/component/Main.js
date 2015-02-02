@@ -25,15 +25,13 @@ var Main = React.createClass({
   },
 ];
     return (
-      <div className="example-page">
+      <div className="focus">
        <LeftNav ref="dockedLeftNav" menuItems={menuItems} docked={this.state.menuDocked} />
 
-        <h1>material-ui</h1>
-        <h2>example project</h2>
+        <h1>Focus - React</h1>
+        <FlatButton label="ToggleMenu" secondary={true} onTouchTap={this._handleDockButtonClick} />
+        <h2>Exemple</h2>
         <Page data={this.props.data}></Page>
-        <FlatButton label="ToggleMenu" primary={true} onTouchTap={this._handleDockButtonClick} />
-        <FlatButton label="Primary" primary={true} />
-        <RaisedButton label="Super Secret Password" primary={true} onTouchTap={this._handleTouchTap} />
       </div>
     );
   },
