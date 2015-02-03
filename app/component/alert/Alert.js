@@ -1,15 +1,12 @@
 /**@jsx*/
 var React = require('react');
-var Input = require('./input');
 var fetch = require('node-fetch');
 module.exports = React.createClass({
   propTypes: {
-    alert: React.PropTypes.object.isRequired
+    data: React.PropTypes.object.isRequired
   },
-  getDefaultProps: function(){
-      return {
-        className: this.props.alert.code
-      }
+  getInitialState: function(){
+    return this.props.data;
   },
   handleBtnAcceptClick: function handleBtnAcceptClick(){
     fetch('http://httpbin.org/post', { method: 'POST', body: 'a=1' }).then(
@@ -18,18 +15,14 @@ module.exports = React.createClass({
     //$.post( 'http://localhost:8080/alerts/'+ alert.id/ +'/accept', {id: alert.id});
   },
   render: function() {
-    var alert = this.props.alert;
-    // The ref attribute adds a reference to the component to
-    // this.refs when the component is mounted.
-
+    var alert = this.state;
     return (
-      <li className={this.props.className}
-          data-id={alert.id}>
+      <li className={this.props.className} data-id={alert.id}>
           <label>
             Code: {alert.code} , Message: {alert.msg}
           </label>
           <button className="ack" onClick={this.handleBtnAcceptClick} />
-        </li>
+      </li>
 
     );
   }

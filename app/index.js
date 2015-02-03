@@ -1,5 +1,6 @@
 require('./config');
 var React = require('react');
+/*
 var SearchInput = require('./component/search-input');
 
 var User = require('./Model/user');
@@ -23,10 +24,10 @@ var MyComponent = React.createClass({
     );
   }
 });
+*/
+var AlertModule = require('./component/alert');
 
-
-
-React.render(<Main data={user.toJSON()}/>, document.body);
+React.render(<AlertModule />, document.body);
 /*React.render(
   <MyComponent name="pierre" data={pierre}/>,
   document.getElementById('example')
