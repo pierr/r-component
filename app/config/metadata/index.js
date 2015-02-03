@@ -1,13 +1,13 @@
 module.exports = {
-  alerte: {
+  alert: {
       id: {
-        domain: "DO_IDENTITY",
+        domain: "DO_IDENTITY"
       },
       ttl: {
         domain: "DO_DURATION",
         required: false
       },
-      message: {
+      msg: {
         domain: "DO_STRING",
         required: true
       },

@@ -4,6 +4,8 @@ var React = require('react');
 var FlatButton = require('material-ui').FlatButton;
 var Snackbar = require('material-ui').Snackbar;
 
+var Alert = require('./Alert');
+
 module.exports = React.createClass({
   editButton: function(){
     if(this.props.hasEdit){
@@ -34,6 +36,11 @@ module.exports = React.createClass({
     return results;
   },
   render: function() {
+    var alert = {
+      id: 1,
+      msg: "test",
+
+    };
     // The ref attribute adds a reference to the component to
     // this.refs when the component is mounted.
     return (
@@ -42,9 +49,9 @@ module.exports = React.createClass({
           {this.renderInputs()}
         </form>
         <FlatButton label="Save"  onTouchTap={this._handleSave} />
-        <Snackbar ref="snackbar"
-          message="The information was successfully updated."
-          action="undo" />
+        <ul class="alerts">
+          <Alert alert={alert}/>
+        </ul>
       </div>
     );
   }

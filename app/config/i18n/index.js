@@ -1,8 +1,8 @@
 module.exports =  {
-  alerte: {
+  alert: {
     id: "Identifiant",
     ttl: "Durée",
-    message: "Message",
+    msg: "Message",
     code: "Type"
   }
 };
