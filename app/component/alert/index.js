@@ -7,12 +7,12 @@ module.exports = React.createClass({
   getInitialState: function(){
     return{
       alerts:[
-        {id:1, msg: "Hello", code: "Security", ttl: 10},
-        {id:2, msg: "Hello2", code: "Security", ttl: 10},
-        {id:3, msg: "Hello3", code: "Security", ttl: 10},
-        {id:4, msg: "Hello4", code: "Security", ttl: 10},
-        {id:5, msg: "Hello5", code: "Security", ttl: 10},
-        {id:6, msg: "Hello6", code: "Security", ttl: 10},
+        {id:1, msg: "Hello", code: "Security", ttl: 10, type: "info"},
+        {id:2, msg: "Hello2", code: "Security", ttl: 10, type: "warning"},
+        {id:3, msg: "Hello3", code: "Security", ttl: 10, type: "info"},
+        {id:4, msg: "Hello4", code: "Security", ttl: 10, type: "danger"},
+        {id:5, msg: "Hello5", code: "Security", ttl: 10, type: "info"},
+        {id:6, msg: "Hello6", code: "Security", ttl: 10, type: "success"},
       ]
     };
   },
@@ -33,9 +33,9 @@ module.exports = React.createClass({
     // this.refs when the component is mounted.
 
     return (
-      <ul>
+      <div class="alertes">
         {this.renderAlerts()}
-      </ul>
+      </div>
     );
   }
 });
