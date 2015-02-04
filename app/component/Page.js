@@ -38,7 +38,7 @@ module.exports = React.createClass({
   render: function() {
     var alert = {
       id: 1,
-      msg: "test",
+      msg: "test"
 
     };
     // The ref attribute adds a reference to the component to

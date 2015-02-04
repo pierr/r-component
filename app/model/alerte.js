@@ -1,5 +1,6 @@
 /*global Backbone, module, require*/
 var labels = require('../config/i18n').alerte;
+var merge = require('lodash/object/merge');
 module.exports = Backbone.Model.extend({
   subject: "alerte",
   metadata: require('../config/metadata').alerte,
